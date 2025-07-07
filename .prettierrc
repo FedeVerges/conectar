@@ -1,0 +1,25 @@
+{
+  "endOfLine": "auto",
+  "printWidth": 80,
+  "singleQuote": true,
+  "trailingComma": "es5",
+  "semi": true,
+  "arrowParens": "always",
+  "bracketSpacing": true,
+  "tabWidth": 2,
+  "useTabs": false,
+  "overrides": [
+    {
+      "files": "*.{ts,tsx}",
+      "options": {
+        "proseWrap": "always"
+      }
+    },
+    {
+      "files": "*.test.{ts,tsx}",
+      "options": {
+        "proseWrap": "never"
+      }
+    }
+  ]
+}
