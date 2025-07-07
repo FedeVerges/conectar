@@ -27,6 +27,25 @@ const AppRouter = () => {
         element: (
           <MainLayout>
             <Home />
+            {/* <HomePrincipal /> */}
+          </MainLayout>
+        ),
+      },
+      {
+        path: '/localidad',
+        element: (
+          <MainLayout>
+            {/* <HomeLocalidad /> */}
+            <>home con las categorias de la localidad.</>
+          </MainLayout>
+        ),
+      },
+      {
+        path: '/<nombre-localidad>/<categoria>',
+        element: (
+          <MainLayout>
+            {/* <HomeLocalidad /> */}
+            <>Listado de comercios por categoria</>
           </MainLayout>
         ),
       },
