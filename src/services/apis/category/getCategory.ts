@@ -1,5 +1,5 @@
-import { categoryMock } from './mock/mockCategory';
 import type { Categoria } from '../../types';
+import { categoryMock } from './mock/mockCategory';
 
 // const BASE_URL = import.meta.env.VITE_BASE_URL;
 

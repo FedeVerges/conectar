@@ -1,6 +1,5 @@
-import type { ReporteEmpleados } from '../../types';
-import { locationMock } from './mock/mockLocation';
 import type { Localidad } from '../../types';
+import { locationMock } from './mock/mockLocation';
 
 // const BASE_URL = import.meta.env.VITE_BASE_URL;
 

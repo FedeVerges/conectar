@@ -19,3 +19,13 @@ export const queryKeys = {
   subcampaniasParametroById: ['subcampaniasParametroById'] as const,
   parametrosGeneralesById: ['parametrosGeneralesById'] as const,
 };
+export const comercioKeys = {
+  all: ['comercios'] as const,
+  list: (filters?: {
+    provinciaId?: string;
+    localidadId?: string;
+    categoria?: string;
+    nombre?: string;
+  }) => [...comercioKeys.all, 'list', filters] as const,
+  byId: (id: string) => [...comercioKeys.all, 'by-id', id] as const,
+};

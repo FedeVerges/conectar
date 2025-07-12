@@ -1,5 +1,5 @@
-import { mockShop } from './mock/mockShop';
 import type { Comercio } from '../../types';
+import { mockShop } from './mock/mockShop';
 
 // const BASE_URL = import.meta.env.VITE_BASE_URL;
 

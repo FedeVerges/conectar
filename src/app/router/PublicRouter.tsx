@@ -6,7 +6,7 @@ import { useAuthStore } from '../../contexts/useAuthStore';
 const PublicRoute = ({ children }: { children: ReactNode }) => {
   const token = useAuthStore((state) => state.token);
 
-  return token ? <Navigate to="/home" /> : children;
+  return token ? <Navigate to="/formulario" /> : children;
 };
 
 export default PublicRoute;

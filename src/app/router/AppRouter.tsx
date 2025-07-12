@@ -4,8 +4,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // import LoadingBackdrop from '../../components/shared/loading/LoadingBackdrop';
 import { MainLayout } from '../../layouts/MainLayout';
-import PublicRouter from './PublicRouter';
 import PrivateRouter from './PrivateRouter';
+import PublicRouter from './PublicRouter';
 const Login = lazy(() => import('../../containers/login/Login'));
 const Form = lazy(() => import('../../containers/formulario/Form'));
 

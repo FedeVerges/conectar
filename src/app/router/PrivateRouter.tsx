@@ -5,7 +5,7 @@ import { useAuthStore } from '../../contexts/useAuthStore';
 
 const PrivateRoute = ({ children }: { children: ReactNode }) => {
   const token = useAuthStore((state) => state.token);
-  return token ? children : <Navigate to="/" />;
+  return token ? children : <Navigate to="/login" />;
 };
 
 export default PrivateRoute;

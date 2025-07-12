@@ -1,23 +1,24 @@
-import { useState, useEffect } from 'react';
 import {
   Box,
   Button,
   CircularProgress,
   Container,
+  Divider,
   Paper,
   TextField,
   Typography,
-  Divider,
 } from '@mui/material';
-import { useNavigate } from 'react-router-dom';
 import {
   GoogleAuthProvider,
-  signInWithPopup,
   signInWithEmailAndPassword,
+  signInWithPopup,
 } from 'firebase/auth';
-import { auth } from '../../firebase/firebase';
-import { useAuthStore } from '../../contexts/useAuthStore';
+import { useEffect,useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
 import logo from '../../assets/logo.png';
+import { useAuthStore } from '../../contexts/useAuthStore';
+import { auth } from '../../firebase/firebase';
 
 const Login = () => {
   const navigate = useNavigate();
