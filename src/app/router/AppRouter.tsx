@@ -4,6 +4,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 // import LoadingBackdrop from '../../components/shared/loading/LoadingBackdrop';
 import { MainLayout } from '../../layouts/MainLayout';
+import PublicRouter from './PublicRouter';
+import PrivateRouter from './PrivateRouter';
+const Login = lazy(() => import('../../containers/login/Login'));
+const Form = lazy(() => import('../../containers/formulario/Form'));
 
 const Home = lazy(() => import('../../containers/home/Home'));
 
@@ -18,10 +22,24 @@ const PageNotFound = lazy(
 const AppRouter = () => {
   const router = createBrowserRouter(
     [
-      // {
-      //   path: '/',
-      //   element: <Login />,
-      // },
+      {
+        path: '/login',
+        element: (
+          <PublicRouter>
+            <Login />
+          </PublicRouter>
+        ),
+      },
+      {
+        path: '/formulario',
+        element: (
+          <PrivateRouter>
+            <MainLayout>
+              <Form />
+            </MainLayout>
+          </PrivateRouter>
+        ),
+      },
       {
         path: '/',
         element: (
