@@ -11,7 +11,7 @@ import {
 
 import { db } from '../../../firebase/firebase';
 import { comercioKeys } from '../../queryKeys';
-import type { Comercio } from '../../types';
+import type { Shop } from '../../types';
 
 interface Params {
   provinciaId: string;
@@ -37,7 +37,7 @@ export const useGetComercio = ({
       const cacheId = `${provinciaId}-${localidadId}-${categoria}`;
       const cacheRef = doc(db, 'cache', cacheId);
 
-      let comercios: Comercio[] = [];
+      let comercios: Shop[] = [];
 
       try {
         const cacheSnap = await getDoc(cacheRef);
@@ -47,7 +47,7 @@ export const useGetComercio = ({
           throw new Error('No cache found'); // Forzar fallback
         }
       } catch (e) {
-        console.log(e)
+        console.log(e);
         // Fallback a consulta real
         const q = query(
           collection(db, 'comercios'),
@@ -59,7 +59,7 @@ export const useGetComercio = ({
         comercios = result.docs.map((doc) => ({
           id: doc.id,
           ...doc.data(),
-        })) as Comercio[];
+        })) as Shop[];
 
         // Guardar nuevo cache
         try {

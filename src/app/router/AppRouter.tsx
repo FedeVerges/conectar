@@ -6,10 +6,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { MainLayout } from '../../layouts/MainLayout';
 import PrivateRouter from './PrivateRouter';
 import PublicRouter from './PublicRouter';
+
 const Login = lazy(() => import('../../containers/login/Login'));
 const Form = lazy(() => import('../../containers/formulario/Form'));
-
-const Home = lazy(() => import('../../containers/home/Home'));
 
 /* const SystemLogs = lazy(
   () => import('../../containers/system-logs/SystemLogs')
@@ -19,9 +18,20 @@ const PageNotFound = lazy(
   () => import('../../containers/page-not-found/PageNotFound')
 );
 
+const Home = lazy(() => import('../../containers/home/Home'));
+
 const AppRouter = () => {
   const router = createBrowserRouter(
     [
+      {
+        path: '/',
+        element: (
+          <MainLayout>
+            <Home />
+            {/* <HomePrincipal /> */}
+          </MainLayout>
+        ),
+      },
       {
         path: '/login',
         element: (
@@ -38,15 +48,6 @@ const AppRouter = () => {
               <Form />
             </MainLayout>
           </PrivateRouter>
-        ),
-      },
-      {
-        path: '/',
-        element: (
-          <MainLayout>
-            <Home />
-            {/* <HomePrincipal /> */}
-          </MainLayout>
         ),
       },
       {
@@ -81,7 +82,7 @@ const AppRouter = () => {
       },
     ],
     {
-      basename: '',
+      basename: '/conectar',
     }
   );
 

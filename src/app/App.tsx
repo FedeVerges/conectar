@@ -10,13 +10,12 @@ import queryClient from '../queryClient';
 import { lightTheme } from '../themes/theme';
 import AppRouter from './router/AppRouter';
 
-
 export const App: React.FunctionComponent = () => {
   return (
     <ThemeProvider theme={lightTheme}>
       <CssBaseline />
       <QueryClientProvider client={queryClient}>
-      <ToastContainer position="top-right" autoClose={3000} />
+        <ToastContainer position="top-right" autoClose={3000} />
         <AppRouter />
       </QueryClientProvider>
     </ThemeProvider>

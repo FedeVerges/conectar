@@ -1,4 +1,4 @@
-import type { Categoria } from '../../../types';
+import type { Category } from '../../../types';
 
 export const categoryMock = [
   {
@@ -114,4 +114,4 @@ export const categoryMock = [
     icono: 'tour',
     localidadId: 'jesusmaria-cba',
   },
-] as Categoria[];
+] as Category[];

@@ -1,10 +1,10 @@
-import type { Locality } from '../../types';
+import type { Province } from '../../types';
 import { locationMock } from './mock/mockLocation';
 
 // const BASE_URL = import.meta.env.VITE_BASE_URL;
 
-export const getLocalidades = async () // month: string
-: Promise<Locality[]> => {
+export const getProvinces = async () // month: string
+: Promise<Province[]> => {
   // const response = await fetch(`${BASE_URL}/reporte/empleado?mes=${month}`);
 
   // if (!response.ok) {

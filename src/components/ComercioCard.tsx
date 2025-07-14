@@ -1,17 +1,10 @@
-import { Language, Phone,Place } from '@mui/icons-material';
-import {
-  Avatar,
-  Box,
-  Button,
-  Card,
-  Stack,
-  Typography,
-} from '@mui/material';
+import { Language, Phone, Place } from '@mui/icons-material';
+import { Avatar, Box, Button, Card, Stack, Typography } from '@mui/material';
 
-import type { Comercio } from '../services/types';
+import type { Shop } from '../services/types';
 
 interface Props {
-  comercio: Comercio;
+  comercio: Shop;
 }
 
 const ComercioCard = ({ comercio }: Props) => {

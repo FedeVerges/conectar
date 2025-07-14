@@ -1,10 +1,10 @@
-import type { Categoria } from '../../types';
+import type { Category } from '../../types';
 import { categoryMock } from './mock/mockCategory';
 
 // const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 export const getCategoriaes = async () // month: string
-: Promise<Categoria[]> => {
+: Promise<Category[]> => {
   // const response = await fetch(`${BASE_URL}/reporte/empleado?mes=${month}`);
 
   // if (!response.ok) {

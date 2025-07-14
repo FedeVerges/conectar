@@ -1,4 +1,4 @@
-import type { Comercio } from '../../../types';
+import type { Shop } from '../../../types';
 
 export const mockShop = [
   {
@@ -98,4 +98,4 @@ export const mockShop = [
     linkMaps: '',
     imagen: '/assets/miradordelsol.jpg',
   },
-] as Comercio[];
+] as Shop[];

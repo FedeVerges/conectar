@@ -35,6 +35,7 @@ export const MainLayout: React.FunctionComponent<MainLayoutProps> = ({
 
   const toggleDrawer = () => setOpen((prev) => !prev);
 
+  // Detectar autentication y cargar datos. O sino agregar boton, "Crear cuenta"
   return (
     <>
       <AppBar

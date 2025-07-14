@@ -1,10 +1,10 @@
-import type { Comercio } from '../../types';
+import type { Shop } from '../../types';
 import { mockShop } from './mock/mockShop';
 
 // const BASE_URL = import.meta.env.VITE_BASE_URL;
 
 export const getComercioes = async () // month: string
-: Promise<Comercio[]> => {
+: Promise<Shop[]> => {
   // const response = await fetch(`${BASE_URL}/reporte/empleado?mes=${month}`);
 
   // if (!response.ok) {
