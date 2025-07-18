@@ -3,8 +3,9 @@ import { locationMock } from './mock/mockLocation';
 
 // const BASE_URL = import.meta.env.VITE_BASE_URL;
 
-export const getLocalidades = async () // month: string
-: Promise<Locality[]> => {
+export const getLocalilitiesByProvince = async (
+  provinceId: string // month: string
+): Promise<Locality[]> => {
   // const response = await fetch(`${BASE_URL}/reporte/empleado?mes=${month}`);
 
   // if (!response.ok) {
@@ -13,6 +14,7 @@ export const getLocalidades = async () // month: string
 
   // const data = await response.json();
   // return data;
+  debugger;
   await new Promise((res) => setTimeout(res, 1000));
-  return locationMock;
+  return locationMock.filter((loc) => loc.provinceId === provinceId);
 };

@@ -2,19 +2,24 @@ import { create } from 'zustand';
 import type { Locality, Province } from '../../services/types';
 
 interface LocationState {
-  provinceSelected: Province | null;
-  localities: Locality[];
-  localitySelected: Locality | null;
-  setProvinceSelected: (province: Province) => void;
-  setLocalities: (localities: Locality[]) => void;
-  setLocalitySelected: (locality: Locality) => void;
+  globalProvinceSelected: Province | null;
+  globalLocalitiesByProvince: Locality[];
+  globalLocalitySelected: Locality | null;
+  setGlobalProvinceSelected: (province: Province) => void;
+  setGlobalLocalitiesByProvince: (localities: Locality[]) => void;
+  setGlobalLocalitySelected: (locality: Locality) => void;
 }
 
 export const useLocationStore = create<LocationState>((set) => ({
-  provinceSelected: null,
-  localities: [],
-  localitySelected: null,
-  setProvinceSelected: (province) => set({ provinceSelected: province }),
-  setLocalities: (localities) => set({ localities }),
-  setLocalitySelected: (locality) => set({ localitySelected: locality }),
+  globalProvinceSelected: null,
+  globalLocalitiesByProvince: [],
+  globalLocalitySelected: null,
+  setGlobalProvinceSelected: (province) =>
+    set({ globalProvinceSelected: province }),
+  setGlobalLocalitiesByProvince: (localities) =>
+    set({ globalLocalitiesByProvince: localities }),
+  setGlobalLocalitySelected: (locality) =>
+    set({ globalLocalitySelected: locality }),
 }));
+
+// TODO: Crear un metodo que cuando se actualice la lista de localidades. La localidad seleccionada se limpia.

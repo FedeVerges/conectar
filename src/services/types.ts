@@ -7,7 +7,7 @@ export interface LookUp {
 export interface Province extends LookUp {}
 
 export interface Locality extends LookUp {
-  provinciaId: string; // Id provincia.
+  provinceId: string; // Id provincia.
 }
 
 export interface Category {

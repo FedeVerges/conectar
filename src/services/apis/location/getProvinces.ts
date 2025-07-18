@@ -1,5 +1,5 @@
 import type { Province } from '../../types';
-import { locationMock } from './mock/mockLocation';
+import { provinciaMock } from './mock/mockProvinces';
 
 // const BASE_URL = import.meta.env.VITE_BASE_URL;
 
@@ -14,5 +14,5 @@ export const getProvinces = async () // month: string
   // const data = await response.json();
   // return data;
   await new Promise((res) => setTimeout(res, 1000));
-  return locationMock;
+  return provinciaMock;
 };
